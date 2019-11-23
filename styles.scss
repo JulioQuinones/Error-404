@@ -1,0 +1,66 @@
+$background:#1a1a1a;
+$button:#0077d8f4;
+$font:'Gill Sans', sans-serif;
+body{
+    margin: 0;
+    padding: 0;
+    background-color: $background;
+}
+.conten{
+    position: fixed;
+    top: 4em;
+    width: 100%;
+    text-align: center;
+    &__img{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            width: 300px;
+            display: block;
+            animation:  animates 2s linear infinite alternate;
+        }
+    }
+    &__number{
+        position: absolute;
+        font-size: 5.5rem;
+        font-family: $font;
+        font-weight: 600;
+        top: 9rem;
+        color: rgba(255,255,255,.5);
+        
+        animation:  animatestext 2s linear infinite alternate;
+    }
+    &__error{
+        color: #ffffff;
+        width: 50%;
+        margin: 2em auto;
+        font-family: $font;
+    }
+    &__button{
+        background-color: $button;
+        color: #ffffff;
+        font-weight: 600;
+        font-family: $font;
+        padding: 0.8em 1em;
+        border-radius: 50px;
+        text-decoration: none;
+    }
+}
+@keyframes animates{
+    0%{
+        transform: translateX(5%);
+    }
+    100%{
+        transform: translateX(-5%);
+    }
+}
+@keyframes animatestext{
+    0%{
+        transform: rotate(5deg);
+    }
+    100%{
+        transform: rotate(-5deg);
+    }
+}
